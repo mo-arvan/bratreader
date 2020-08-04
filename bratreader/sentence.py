@@ -18,7 +18,7 @@ class Sentence(object):
 
         for windex, w in enumerate(line.split()):
 
-            start = start
+            start = start + line[start - self.start:].index(w)
             end = start+len(w)
             self.words.append(Word(key=windex,
                                    sentkey=self.key,
