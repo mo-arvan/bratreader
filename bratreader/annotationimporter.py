@@ -22,7 +22,7 @@ def importann(pathtofile):
 
     char_index = 0
 
-    for sent_index, line in enumerate(open(path + ".txt", encoding='utf-8')):
+    for sent_index, line in enumerate(open(path + ".txt", 'rt', newline='', encoding='utf-8')):
         sentences.append(Sentence(sent_index, line, char_index))
         char_index += len(line)
 
